@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterfaceLogic.cs" />
+    <Compile Include="Logic.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Example\IDiscount.cs" />
+    <Compile Include="Example\Product.cs" />
+    <Compile Include="Example\Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
