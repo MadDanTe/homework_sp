@@ -11,5 +11,7 @@ namespace HelloSchool
         bool addProduct();
         int getDiscountCard();
         decimal getDiscountPrcent();
+        decimal getDiscountPrice();
+
     }
 }

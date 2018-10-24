@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace HelloSchool
 {
-    class Class1
+    class Product
     {
+        public String Name { get; set; }
+        public int Price { get; set; }
+        public DateTime? StartDateSell { get; set; }
+        public DateTime? EndDateSell { get; set; }
     }
 }

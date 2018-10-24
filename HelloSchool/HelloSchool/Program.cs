@@ -10,8 +10,13 @@ namespace HelloSchool
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello School!");
-            Console.ReadLine();
+            Console.WriteLine("Вы хотите:"+"/n"+" 1 - Добавить товар"+"/n"+" 2 - Применить скидку"+"/n"+"3 - Выход");
+            int.TryParse(Console.ReadLine(), out var ans);
+            switch(ans)
+            {
+                case 1:
+                    ;
+            }
         }
     }
 }
