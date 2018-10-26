@@ -10,7 +10,7 @@ namespace HelloSchool
     {
         static List<Product> allProducts = new List<Product>();
 
-        public bool addProduct()
+        public void addProduct()
         {
             var product = new Product();
             Console.WriteLine("Введите название продукта");
@@ -18,7 +18,7 @@ namespace HelloSchool
             Console.WriteLine("Введите стоимость продукта");
             rp:
             int.TryParse(Console.ReadLine(), out var price);
-            if(price==0)
+            if(price<=0 )
             {
                 Console.WriteLine("Стоимость продукта не была введена или она была введена с ошибкой. Пожалуйста, введите стоимость продукта ещё раз");
                 goto rp;
@@ -35,7 +35,7 @@ namespace HelloSchool
                 goto resd;
             product.EndDateSell = endSellDate;
             allProducts.Add(product);
-            return true;
+
         }
 
         public void getDiscountCard()

@@ -8,7 +8,7 @@ namespace HelloSchool
 {
     interface InterfaceLogic
     {
-        bool addProduct();
+        void addProduct();
         void getDiscountCard();
         void getDiscountPercent();
         void getDiscountPrice();
