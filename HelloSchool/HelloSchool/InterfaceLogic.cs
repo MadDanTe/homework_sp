@@ -9,9 +9,10 @@ namespace HelloSchool
     interface InterfaceLogic
     {
         bool addProduct();
-        int getDiscountCard();
-        decimal getDiscountPrcent();
-        decimal getDiscountPrice();
+        void getDiscountCard();
+        void getDiscountPercent();
+        void getDiscountPrice();
+        int getSelectedProduct();
 
     }
 }
