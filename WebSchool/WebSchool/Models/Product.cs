@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloSchool
+namespace WebSchool.Models
 {
-    class Product
+    public class Product
     {
+        public int ID { get; set; }
         public String Name { get; set; }
         public int Price { get; set; }
-        public DateTime? StartDateSell { get; set; }
-        public DateTime? EndDateSell { get; set; }
     }
 }
