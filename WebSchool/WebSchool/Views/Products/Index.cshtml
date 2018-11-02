@@ -1,0 +1,32 @@
+﻿@model IEnumerable<WebSchool.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="row">
+    <div class="col-md-3">
+        <h2>Name:</h2>
+        <ul>
+            @foreach (var p in Model)
+            {
+                <li>@p.Name</li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Age:</h2>
+        <ul>
+            @foreach (var p in Model)
+            {
+                <li>@p.Price</li>
+            }
+        </ul>
+    </div>
+
+</div>

@@ -33,15 +33,16 @@
         <ul>
             @foreach (var c in Model)
             {
-                <li>@c.Budget</li>
+                <li>@c.Budget <a asp-controller="Products" asp-route-id="@c.Budget" asp-action="Edit">Доступные товары</a></li>
             }
         </ul>
     </div>
 </div>
 
 
-    @*<table class="table">
+@*<table class="table">
         <thead>
+        <a asp-controller="Product" asp-action="Index" asp-route-id="@c.ID">Показать доступные товары</a>
             <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.Name)
