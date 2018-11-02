@@ -47,7 +47,7 @@ namespace WebSchool
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Customers/Error");
                 app.UseHsts();
             }
 
@@ -59,7 +59,7 @@ namespace WebSchool
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Customers}/{action=Index}/{id?}");
             });
         }
     }
