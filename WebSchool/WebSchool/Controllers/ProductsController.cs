@@ -67,6 +67,8 @@ namespace WebSchool.Controllers
         }
 
         // GET: Products/Edit/5
+        [HttpGet]
+        [Route("Product/Edit")]
         public async Task<IActionResult> Edit(int? budget)
         {
             var t = budget;

@@ -33,7 +33,7 @@
         <ul>
             @foreach (var c in Model)
             {
-                <li>@c.Budget <a asp-controller="Products" asp-route-id="@c.Budget" asp-action="Edit">Доступные товары</a></li>
+                <li>@c.Budget <a href="@Url.Action("Edit", "Product", new {budget = c.Budget })">Доступные товары</a></li>
             }
         </ul>
     </div>
