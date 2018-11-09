@@ -1,5 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<WebSchool.Models.Order>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Name:</h2>
+        <ul>
+            @foreach (var p in Model)
+            {
+                <li>@p.Name</li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Age:</h2>
+        <ul>
+            @foreach (var p in Model)
+            {
+                <li>@p.Price</li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Age:</h2>
+        <ul>
+            @foreach (var p in Model)
+            {
+                <li> <a href="@Url.Action("Add", "Order", new {id = p.ID })">Добавить в заказ</a></li>
+            }
+        </ul>
+    </div>
+
+</div>

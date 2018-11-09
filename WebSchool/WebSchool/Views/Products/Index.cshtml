@@ -28,5 +28,14 @@
             }
         </ul>
     </div>
+    <div class="col-md-3">
+        <h2>Age:</h2>
+        <ul>
+            @foreach (var p in Model)
+            {
+            <li> <a href="@Url.Action("Add", "Order", new {id = p.ID })">Добавить в заказ</a></li>
+            }
+        </ul>
+    </div>
 
 </div>
