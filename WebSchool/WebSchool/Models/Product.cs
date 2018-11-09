@@ -10,5 +10,11 @@ namespace WebSchool.Models
         public int ID { get; set; }
         public String Name { get; set; }
         public decimal Price { get; set; }
+        public List<OrderItem> OrderItems { get; set; }
+
+        public Product()
+        {
+
+        }
     }
 }

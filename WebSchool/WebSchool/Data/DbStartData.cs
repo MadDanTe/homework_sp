@@ -12,7 +12,7 @@ namespace WebSchool.Data
         {
             if (context.Customers.Any())
                 return;
-            var customers = new Customer[] 
+            var customers = new Customer[]
             {
                 new Customer{ Name="Инокентий", Age=24, Sex="Male", Budget=25000 },
                 new Customer{ Name="Акакий", Age=30, Sex="Male", Budget=14000 },
@@ -21,7 +21,7 @@ namespace WebSchool.Data
                 new Customer{ Name="Виктор", Age=37, Sex="Male", Budget=21000}
             };
 
-            foreach(var c in customers)
+            foreach (var c in customers)
                 context.Customers.Add(c);
 
             var products = new Product[]

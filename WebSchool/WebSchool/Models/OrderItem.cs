@@ -7,6 +7,10 @@ namespace WebSchool.Models
 {
     public class OrderItem
     {
+        private OrderItem()
+        {
+
+        }
         public OrderItem(Product product, int count)
         {
             Product = product;
