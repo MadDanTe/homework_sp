@@ -33,7 +33,7 @@
         <ul>
             @foreach (var p in Model)
             {
-            <li> <a href="@Url.Action("Add", "Order", new {id = p.ID })">Добавить в заказ</a></li>
+            <li> <a href="@Url.Action("AddOrd", "Orders", new {ID = p.ID })">Добавить в заказ</a></li>
             }
         </ul>
     </div>
