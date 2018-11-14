@@ -4,83 +4,33 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Products</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<div class="row">
-    <div class="col-md-3">
-        <h2>Name:</h2>
-        <ul>
-            @foreach (var c in Model)
-            {
-                <li>@c.Name</li>
-            }
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Age:</h2>
-        <ul>
-            @foreach (var c in Model)
-            {
-                <li>@c.Age</li>
-            }
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Budget:</h2>
-        <ul>
-            @foreach (var c in Model)
-            {
-                <li>@c.Budget <a href="@Url.Action("Edit", "Product", new {budget = c.Budget })">Доступные товары</a></li>
-            }
-        </ul>
-    </div>
-</div>
-
-
-@*<table class="table">
-        <thead>
-        <a asp-controller="Product" asp-action="Index" asp-route-id="@c.ID">Показать доступные товары</a>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name:</th>
+            <th scope="col">Age:</th>
+            <th scope="col">Budget:</th>
+            <th scope="col">Control:</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var c in Model)
+        {
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Age)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Sex)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Budget)
-                </th>
-                <th></th>
+                <th scope="row">@c.Name</th>
+                <td>@c.Age</td>
+                <td>@c.Budget</td>
+                <td>
+                    <a class="btn btn-primary" href="@Url.Action("Edit", "Product", new {budget = c.Budget })">Доступные товары</a>
+                    <a class="btn btn-primary" href="@Url.Action("Edit", "Product", new {budget = c.Budget })">Просмотреть заказы</a>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Age)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Sex)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Budget)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>*@
+        }
+    </tbody>
+
+</table>

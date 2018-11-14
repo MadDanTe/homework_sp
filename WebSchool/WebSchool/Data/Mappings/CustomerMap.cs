@@ -13,6 +13,7 @@ namespace WebSchool.Data.Mappings
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
             builder.HasKey(x => x.ID);
+            builder.HasMany(x => x.Orders);
         }
     }
 }

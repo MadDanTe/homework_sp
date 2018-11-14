@@ -12,5 +12,6 @@ namespace WebSchool.Models
         public int Age { get; set; }
         public String Sex { get; set; }
         public int Budget { get; set; }
+        public List<Order> Orders { get; set; }
     }
 }

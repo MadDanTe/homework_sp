@@ -16,10 +16,18 @@ namespace WebSchool.Models
         public int ID { get; set; }
         public string Number { get; set; }
         public List<OrderItem> Items { get; set; }
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
 
         private string GenerateNumber()
         {
             return $"{DateTime.Now.ToString("yyyyMMdd-HHmmss")}";
         }
+    }
+
+    public enum OrderStatus
+    {
+        NotPayed,
+        Payed
     }
 }

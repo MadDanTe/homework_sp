@@ -14,6 +14,7 @@ namespace WebSchool.Data.Mappings
         {
             builder.HasKey(x=>x.ID);
             builder.HasMany(x => x.Items);
+            builder.HasOne(x => x.Customer).WithMany(x => x.Orders).HasForeignKey(x => x.CustomerId);
         }
     }
 }
