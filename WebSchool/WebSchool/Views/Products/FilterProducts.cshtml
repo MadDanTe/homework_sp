@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebSchool.Models.Product>
+
+@{
+    ViewData["Title"] = "Filter Products";
+}
+<h2>FilterProduct</h2>
+<table class="table">
+    <thead class="thead-black">
+        <tr>
+            <th scope="col">Name:</th>
+            <th scope="col">Price:</th>
+            <th scope="col">Control:</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var p in Model)
+        {
+        <tr>
+            <th scope="row">@p.Name</th>
+            <td>@p.Price</td>
+            <td><a class="btn btn-primary" href="@Url.Action("AddInCustomerOrder", "Orders", new {ID = p.ID })">Добавить в заказ</a></td>
+        </tr>
+
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

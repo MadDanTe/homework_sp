@@ -68,58 +68,14 @@ namespace WebSchool.Controllers
 
         // GET: Products/Edit/5
         [HttpGet]
-        [Route("Product/Edit")]
-        public async Task<IActionResult> Edit(int? budget)
+        [Route("Product/FilterProducts")]
+        public async Task<IActionResult> FilterProducts(int? budget)
         {
             var t = budget;
             return View(await _context.Products.Where(x => x.Price <= budget).ToListAsync());
-            //if (id == null)
-            //{
-            //    return NotFound();
-            //}
 
-            //var product = await _context.Products.FindAsync(id);
-            //if (product == null)
-            //{
-            //    return NotFound();
-            //}
-            //return View(product);
         }
 
-        // POST: Products/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Price")] Product product)
-        //{
-        //    if (id != product.ID)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            _context.Update(product);
-        //            await _context.SaveChangesAsync();
-        //        }
-        //        catch (DbUpdateConcurrencyException)
-        //        {
-        //            if (!ProductExists(product.ID))
-        //            {
-        //                return NotFound();
-        //            }
-        //            else
-        //            {
-        //                throw;
-        //            }
-        //        }
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    return View(product);
-        //}
 
         // GET: Products/Delete/5
         public async Task<IActionResult> Delete(int? id)

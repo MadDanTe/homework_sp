@@ -73,5 +73,7 @@ namespace WebSchool.Controllers
 
             return View(orderItem);
         }
+        [HttpGet]
+        [Route("Order/")]
     }
 }

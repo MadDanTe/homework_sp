@@ -26,8 +26,8 @@
                 <td>@c.Age</td>
                 <td>@c.Budget</td>
                 <td>
-                    <a class="btn btn-primary" href="@Url.Action("Edit", "Product", new {budget = c.Budget })">Доступные товары</a>
-                    <a class="btn btn-primary" href="@Url.Action("Edit", "Product", new {budget = c.Budget })">Просмотреть заказы</a>
+                    <a class="btn btn-primary" href="@Url.Action("FilterProducts", "Product", new {budget = c.Budget })">Доступные товары</a>
+                    <a class="btn btn-primary" href="@Url.Action("CustomerOrders", "Order", new {budget = c.Budget })">Просмотреть заказы</a>
                 </td>
             </tr>
         }
